@@ -1,0 +1,29 @@
+# OpenSpec project configuration for DIC3 Project Refactor (DietSense)
+schema: spec-driven
+
+context: |
+  DIC3 Project Refactor is a repository for organizing project plans,
+  architectural decisions, requirements, and implementation work.
+  DietSense is a domain-specific conversational AI Agent designed for daily calorie intake analysis,
+  personalized dietary assessment, and safety-aware weight management in Taiwan.
+  Its core architecture adheres to: "LLM coordinates interaction, domain tools compute numbers,
+  official guidelines guard safety".
+  Preserve the academic distinction between proposed outcomes and verified experimental results.
+
+rules:
+  proposal:
+    - State the problem, motivation, scope, risks, and expected outcomes (A to F).
+    - Provide 5 cores, 3 trade-offs, and 10 details.
+    - Do not claim unverified findings as measured results (proposal phase).
+  specs:
+    - Use testable SHALL requirements and WHEN/THEN scenarios.
+    - Strictly separate natural language interaction, data retrieval, model planning, and deterministic computation.
+    - Embed strict safety rules (e.g. minimum daily intake < 1200 kcal/day, eating disorder guardrails).
+  design:
+    - Convert architecture into explicit, event-driven workflows and state transitions.
+    - Include data provenance, uncertainty quantification, fallback mechanisms, and validation strategies.
+    - Provide numbered modules (① to ⑧) and executable pseudocode with line numbers.
+  tasks:
+    - Keep implementation steps small, logically sequential, and independently verifiable.
+    - Detail baseline comparison (MyFitnessPal), dataset construction (500 Taiwanese foods), and user study (20 users x 7 days).
+
